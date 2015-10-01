@@ -24,42 +24,9 @@
 <dd><s><a href="http://www.s14u.info/mt/">blog.s14u.info</a> (Japanese) </s></dd>
 </dl>
 
-<dl>
-<dt><h2>Recently updated from <a href="http://friendfeed.com/comewalk">FriendFeed</a></h2></dt>
-<dd><div id="display"></div></dd>
-</dl>
-
 <div id="footer">
 takatsugu.shigeta [at] gmail.com
-<div id="elsewhere"></div>
 </div>
 
-<script type="text/javascript">
-function retrieveFriendFeed(json) {
-    var entries = json.entries;
-    var html = '';
-    var date = '';
-    for (i in entries) {
-        var tmp = entries[i].updated.substring(0, 10);
-        if (tmp != date) {
-            date = tmp;
-            html += '<p>' + date + '</p>';
-        }
-        
-        html += '<a rel="me" href="' + entries[i].service.profileUrl + '">' + '<img src="' + entries[i].service.iconUrl + '" border="0"/>' + '</a>' + '<a href="' + entries[i].link + '">' + entries[i].title + '</a><br />';
-    }
-    $('#display').html(html);
-}
-function displayElsewhere(json) {
-    var services = json.services;
-    var html = '';
-    for (i in services) {
-        html += '<a rel="me" href="' + services[i].profileUrl + '">' + '<img title="' + services[i].name + '" src="' + services[i].iconUrl + '" border="0"/>' + '</a>';
-    }
-    $('#elsewhere').html(html);
-}
-</script>
-<script type="text/javascript" src="http://friendfeed.com/api/feed/user/comewalk?callback=retrieveFriendFeed"></script>
-<script type="text/javascript" src="http://friendfeed.com/api/user/comewalk/profile?include=id,services&callback=displayElsewhere"></script>
 </body>
 </html>
