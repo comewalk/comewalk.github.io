@@ -1,3 +1,18 @@
-body, a, dt, dd {
-  font-family: "Trebuchet MS", Arial, sans-serif;
-}
+* {
+  font-family: 'Merriweather', serif; }
+.intro {
+  width: 60vw;
+  margin: 0 auto; }
+.h1 {
+  font-size: 2rem; }
+.quoted {
+  color: #999; }
+.elsewhere-list {
+  list-style-type: none;
+  padding-left: 0px; }
+  .elsewhere-list__list-item {
+  display: inline; }
+  .elsewhere-list__list-item a:link {
+  color: #999; }
+  .elsewhere-list__list-item a:hover {
+  color: #000; }
